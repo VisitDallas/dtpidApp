@@ -30,7 +30,7 @@ app.get("/posteventform", function(req, res) {
 });
 
 app.get("*", function(req, res){
-    res.render("home");
+    res.render("devhome");
 });
 
 app.listen(port, hostname, () => {
