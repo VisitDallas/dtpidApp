@@ -401,6 +401,7 @@ $(document).ready(function () {
     $("#00N0b000007v1mP").datepicker({
         // dateFormat: "dd-M-yy",
         minDate: 90,
+        maxDate: new Date(2020, 8, 30),
         onSelect: function () {
             var dt2 = $('#00N0b000007v1qc');
             var startDate = $(this).datepicker('getDate');
