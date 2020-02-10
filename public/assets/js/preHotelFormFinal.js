@@ -24,7 +24,7 @@ let percentInventoryAtPeakDisplay = document.getElementById("00N0b000009gTge");
 let percentInventoryAtPeak = 0;
 
 peakHotelRoomNightsDisplay.addEventListener("change", function(){
-	peakHotelRoomNightsDisplay.value = parseFloat(hotelRoomNightDisplay.value.replace(/,/g, ''));
+	peakHotelRoomNightsDisplay.value = parseFloat(peakHotelRoomNightsDisplay.value.replace(/,/g, ''));
 	peakHotelRoomNights = Number(this.value);
 	calculatePercentInventory();
 	peakHotelRoomNightsDisplay.value = numberWithCommas(peakHotelRoomNights);
@@ -34,7 +34,7 @@ totalSleepingRoomsDisplay.addEventListener("change", function(){
 	totalSleepingRoomsDisplay.value = parseFloat(totalSleepingRoomsDisplay.value.replace(/,/g, ''));
 	totalSleepingRooms = Number(this.value);
 	calculatePercentInventory();
-	peakHotelRoomNightsDisplay.value = numberWithCommas(peakHotelRoomNights);
+	totalSleepingRoomsDisplay.value = numberWithCommas(totalSleepingRooms);
 });
 
 function calculatePercentInventory() {
