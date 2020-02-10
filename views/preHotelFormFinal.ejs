@@ -175,22 +175,6 @@
 		</div>
 	</div>
 
-	<div class="form-group form-inline hide">
-		<!-- <label>Event Start Date:</label>
-		<span class="dateInput dateOnlyInput">
-		<input id="00N0b000007v1mP" class="form-control" name="00N0b000007v1mP" size="12" type="text" placeholder="mm/dd/yyyy" required/></span> -->
-
-		<!-- <label>Event End Date:</label>
-		<span class="dateInput dateOnlyInput">
-		<input id="00N0b000007v1qc" class="form-control" name="00N0b000007v1qc" size="12" type="text" placeholder="mm/dd/yyyy" required/></span> -->
-
-		<!-- <label>Event Decision Date:</label>
-		<span class="dateInput dateOnlyInput"><input  id="00N0b00000Bf6oE" class="form-control" name="00N0b00000Bf6oE" size="12" type="text" placeholder="mm/dd/yyyy" required/></span>
-
-		<label>If Yes, Last Event Date:</label>
-		<span class="dateInput dateOnlyInput"><input id="00N0b0000082rE7" class="form-control" name="00N0b0000082rE7" size="12" type="text" placeholder="mm/dd/yyyy"/></span> -->
-	</div>
-
 	<div class="form-group">
 		<label class="col-sm-2 control-label">
 			Event Start Date:
@@ -211,10 +195,10 @@
 
 	<div class="form-group">
 		<label class="col-sm-2 control-label">
-			% of Inventory at Peak:
+			Peak Hotel Room Nights for Event:
 		</label>
 		<div class="col-sm-9">
-			<input id="00N0b000009gTge" class="form-control" name="00N0b000009gTge" size="20" type="text" placeholder="0" required/>
+			<input id="00N0b00000CnNpw" class="form-control" name="00N0b00000CnNpw" size="20" type="text" placeholder="0" required/>
 		</div>
 	</div>
 
@@ -224,6 +208,26 @@
 		</label>
 		<div class="col-sm-9">
 			<input id="00N0b00000Cmy6U" class="form-control" name="00N0b00000Cmy6U" size="20" type="text" placeholder="0" required/>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">
+			% of Inventory at Peak: (Must be greater than or equal to 10%)
+		</label>
+		<div class="col-sm-9">
+			<input id="shownInventoryAtPeakDisplay" class="form-control" name="shownInventoryAtPeakDisplay" size="20" type="text" placeholder="0" required readonly/>
+			<li id="setHigherPercentage" class="hide showcaseRed">This number has to be higher than 10% for application to be accepted</li>
+			<li id="addRooms" class="hide showcaseRed">Input "Total Sleeping Rooms at Property"</li>
+		</div>
+	</div>
+
+	<div class="form-group hide">
+		<label class="col-sm-2 control-label">
+			% of Inventory at Peak:
+		</label>
+		<div class="col-sm-9">
+			<input id="00N0b000009gTge" class="form-control" name="00N0b000009gTge" size="20" type="text" placeholder="0" required readonly/>
 		</div>
 	</div>
 
@@ -298,7 +302,7 @@
 
 	<p class="disclaimer"><strong>Print this screen for your records before submitting. (Control+P or Command+P)</strong></p>
 	
-	<input class="btn btn-primary btn-lg btn-block" type="submit" name="submit">
+	<input type="submit" class="btn btn-primary btn-lg btn-block" id="submit" name="submit" disabled>
 </div>
 </form>
 
