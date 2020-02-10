@@ -16,6 +16,32 @@ var mobileDisplay = document.getElementById("mobile");
 var mobileValue = "";
 var currentDate = document.getElementById("00N0b00000CclxK");
 
+let peakHotelRoomNightsDisplay = document.getElementById("00N0b00000CnNpw");
+let peakHotelRoomNights = 0;
+let totalSleepingRoomsDisplay = document.getElementById("00N0b00000Cmy6U");
+let totalSleepingRooms = 0;
+let percentInventoryAtPeakDisplay = document.getElementById("00N0b000009gTge");
+let percentInventoryAtPeak = 0;
+
+peakHotelRoomNightsDisplay.addEventListener("change", function(){
+	peakHotelRoomNightsDisplay.value = parseFloat(hotelRoomNightDisplay.value.replace(/,/g, ''));
+	peakHotelRoomNights = Number(this.value);
+	calculatePercentInventory();
+	peakHotelRoomNightsDisplay.value = numberWithCommas(peakHotelRoomNights);
+});
+
+totalSleepingRoomsDisplay.addEventListener("change", function(){
+	totalSleepingRoomsDisplay.value = parseFloat(totalSleepingRoomsDisplay.value.replace(/,/g, ''));
+	totalSleepingRooms = Number(this.value);
+	calculatePercentInventory();
+	peakHotelRoomNightsDisplay.value = numberWithCommas(peakHotelRoomNights);
+});
+
+function calculatePercentInventory() {
+	percentInventoryAtPeak = Math.round((peakHotelRoomNights / totalSleepingRooms) * 100);
+	percentInventoryAtPeakDisplay.value = percentInventoryAtPeak;
+}
+
 hotelRoomNightDisplay.addEventListener("change", function(){
 	hotelRoomNightDisplay.value = parseFloat(hotelRoomNightDisplay.value.replace(/,/g, ''));
 	hotelRoomNight = Number(this.value);
