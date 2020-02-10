@@ -213,6 +213,17 @@
 
 	<div class="form-group">
 		<label class="col-sm-2 control-label">
+			% of Inventory at Peak: (Must be greater than or equal to 10%)
+		</label>
+		<div class="col-sm-9">
+			<input id="shownInventoryAtPeakDisplay" class="form-control" name="shownInventoryAtPeakDisplay" size="20" type="text" placeholder="0" required readonly/>
+			<li id="setHigherPercentage" class="hide showcaseRed">This number has to be higher than 10% for application to be accepted</li>
+			<li id="addRooms" class="hide showcaseRed">Input "Total Sleeping Rooms at Property"</li>
+		</div>
+	</div>
+
+	<div class="form-group hide">
+		<label class="col-sm-2 control-label">
 			% of Inventory at Peak:
 		</label>
 		<div class="col-sm-9">
@@ -291,7 +302,7 @@
 
 	<p class="disclaimer"><strong>Print this screen for your records before submitting. (Control+P or Command+P)</strong></p>
 	
-	<input class="btn btn-primary btn-lg btn-block" type="submit" name="submit">
+	<input type="submit" class="btn btn-primary btn-lg btn-block" id="submit" name="submit" disabled>
 </div>
 </form>
 
