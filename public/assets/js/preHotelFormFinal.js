@@ -26,6 +26,7 @@ let shownPercentInventoryAtPeakDisplay = document.getElementById("shownInventory
 let submitButton = document.getElementById("submit");
 let setHigherPercentage = document.getElementById("setHigherPercentage");
 let addRooms = document.getElementById("addRooms");
+let approvedAmount = document.getElementById("00N0b00000Cnohu");
 
 peakHotelRoomNightsDisplay.addEventListener("change", function(){
 	peakHotelRoomNightsDisplay.value = parseFloat(peakHotelRoomNightsDisplay.value.replace(/,/g, ''));
@@ -88,6 +89,7 @@ amountRequestedDisplay.addEventListener("change", function(){
 	amountRequested = Number(this.value);
 	checkRequested();
 	amountRequestedDisplay.value = numberWithCommas(amountRequested);
+	approvedAmount.value = amountRequested;
 })
 
 checkboxDallas.addEventListener("change", function(){
@@ -111,12 +113,14 @@ function checkRequested(){
 	if(amountRequested > finalDTPIDAmount){
 		amountRequested = finalDTPIDAmount;
 		amountRequestedDisplay.value = numberWithCommas(amountRequested);
+		approvedAmount.value = amountRequested;
 	}
 }
 
 function displayMaximumEligibleCalculations(){
 	totalRevenueDisplay.textContent = numberWithCommas(totalRevenue);
 	finalDTPIDAmountDisplay.textContent = numberWithCommas(finalDTPIDAmount);
+	approvedAmount.value = finalDTPIDAmount;
 }
 
 function checkIfOverMax(){
