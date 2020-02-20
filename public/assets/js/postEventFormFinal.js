@@ -330,7 +330,7 @@ function numberWithCommas(x) {
 
 //submit function to open email to send extra documents
 function myFunction() {
-	var email = 'maribeth@visitdallas.com';
+	var email = 'maribeth@dallastpid.com';
 	var subject = eventOrganization + ', ' + eventName + " - Post Event: Supplemental Documents";
 	window.location.href='mailto:'+email+'?subject='+subject;
 }
