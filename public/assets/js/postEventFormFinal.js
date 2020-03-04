@@ -43,6 +43,8 @@ var eventName = "";
 var requestedAmountDisplay = document.getElementById("00N0b00000BQW8e");
 var requestedAmount = 0;
 var currentDate = document.getElementById("00N0b00000CclxP");
+var truthCheck = document.getElementById("truthCheckbox");
+var tellingTruth = false;
 
 //event listeners
 //estimation choice event listener
@@ -98,6 +100,16 @@ totalEventBudgetDisplay.addEventListener("change", function(){
 	overPercentage();
 	showSubmit();
 });
+
+truthCheck.addEventListener("change", function(){
+	if (truthCheck.checked){
+		tellingTruth = true;
+		showSubmit();
+	} else {
+		tellingTruth = false;
+		showSubmit();
+	}
+})
 
 //event sums fields are assigned values and then calculated
 $(".eventSum").change(function(){
@@ -241,7 +253,7 @@ function overPercentage(){
 
 //logic to make submit button read only or not
 function showSubmit(){
-	if(requestedAmount == summedDTPIDFunds && percentDTPIDTotal <= 35 && hotelRoomNights > 30 && totalRevenue > 5000){
+	if(requestedAmount == summedDTPIDFunds && percentDTPIDTotal <= 35 && hotelRoomNights > 30 && totalRevenue > 5000 && tellingTruth === true){
 		document.getElementById("submit").removeAttribute("disabled");
 	}
 	else {
