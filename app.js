@@ -1,6 +1,4 @@
-import http from 'http';
-
-import express, { static } from "express";
+let express = require("express");
 let app = express();
 
 app.use(static("public"));
