@@ -88,7 +88,7 @@ function formatPhoneNumber(phoneNumberString) {
 }
 
 function myFunction(){
-	var email = 'sheryl@visitdallas.com';
+	var email = 'sheryl@dallastpid.com';
 	var subject = hotelName + ', ' + eventName + " - Post Event: Pick-Up Report";
 	window.location.href='mailto:'+email+'?subject='+subject;
 }

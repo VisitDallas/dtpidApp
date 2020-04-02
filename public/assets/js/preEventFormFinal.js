@@ -64,6 +64,8 @@ var partialPaymentPercentage = document.getElementById("00N0b00000899QC");
 var partialPaymentMath = .25;
 var partialRequestedAmount = document.getElementById("00N0b00000899kp");
 var finalRequestedAmount = document.getElementById("00N0b00000Cbqrv");
+var truthCheck = document.getElementById("truthCheckbox");
+var tellingTruth = false;
 
 statePicklistDisplay.addEventListener("change", function(){
 	statePicklistValue = statePicklistDisplay.value;
@@ -72,6 +74,16 @@ statePicklistDisplay.addEventListener("change", function(){
 		console.log("box not checked");
 	} else {
 		eventLocationStateDisplay.value = statePicklistValue;
+	}
+})
+
+truthCheck.addEventListener("change", function(){
+	if (truthCheck.checked){
+		tellingTruth = true;
+		showSubmit();
+	} else {
+		tellingTruth = false;
+		showSubmit();
 	}
 })
 
@@ -347,7 +359,7 @@ function overPercentage(){
 }
 
 function showSubmit(){
-	if(requestedAmount == summedDTPIDFunds && percentDTPIDFundsTotal <= 35 && hotelRoomNights > 30 && totalRevenue > 5000){
+	if(requestedAmount == summedDTPIDFunds && percentDTPIDFundsTotal <= 35 && hotelRoomNights > 30 && totalRevenue > 5000 && tellingTruth === true){
 		submitButton.removeAttribute("disabled");
 	}
 	else {
