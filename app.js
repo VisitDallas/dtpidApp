@@ -1,9 +1,9 @@
-const http = require('http');
+import http from 'http';
 
-let express = require("express");
+import express, { static } from "express";
 let app = express();
 
-app.use(express.static("public"));
+app.use(static("public"));
 app.set("view engine", "ejs");
 
 app.get("/prehotelform", function(req, res){

@@ -1,11 +1,11 @@
-<% include partials/header.ejs %> 
+<%- include ('partials/header.ejs') %> 
 
 		<title>DTPID Pre Event Form Submission</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/preEventFormFinal.css">
 	</head>
 	<body>
 
-	<% include partials/navbar.ejs %> 
+	<%- include ('partials/navbar.ejs') %> 
 
 <div class="container">
 
@@ -49,7 +49,7 @@
 		<!-- Contact Information -->
 		<div>
 			
-			<% include partials/contactInformation.ejs %>
+			<%- include ('partials/contactInformation.ejs') %>
 
 			<!-- Third Row -->
 
@@ -130,7 +130,7 @@
 		<!-- Event Information -->
 		<div class="form-horizontal">
 			
-			<% include partials/eventInformation %> 
+			<%- include ('partials/eventInformation') %> 
 
 			<div class="form-group">
 				<label class="col-sm-2 control-label">
@@ -457,4 +457,4 @@
 </div>
 <script type="text/javascript" src="assets/js/preEventFormFinal.js"></script>
 
-<% include partials/footer.ejs %> 
+<%- include ('partials/footer.ejs') %> 

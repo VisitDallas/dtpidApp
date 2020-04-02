@@ -1,11 +1,11 @@
-<% include partials/header.ejs %>
+<%- include ('partials/header.ejs') %>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/postEventFormFinal.css">
 	<title>Post Event Hotel Reimbursement Form</title>
 </head>
 <body>
 
-	<% include partials/navbar.ejs %>
+	<%- include ('partials/navbar.ejs') %>
 
 	<div class="container">
 
@@ -43,7 +43,7 @@
 	
 		<!-- Event/Contact Information -->
 		<div>
-			<% include partials/contactInformation.ejs %>
+			<%- include ('partials/contactInformation.ejs') %>
 
 				<h3>Organization Information:</h3>
 
@@ -68,7 +68,7 @@
 					</div>
 				</div>
 
-				<% include partials/eventInformation.ejs %> 
+				<%- include ('partials/eventInformation.ejs') %> 
 
 				<div class="form-group">
 					<label class="col-sm-2 control-label">OAC Funding:</label>
@@ -300,4 +300,4 @@
 
 	<script type="text/javascript" src="assets/js/postEventFormFinal.js"></script>
 
-	<% include partials/footer.ejs %> 
+	<%- include ('partials/footer.ejs') %> 
