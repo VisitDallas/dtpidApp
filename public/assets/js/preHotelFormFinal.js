@@ -4,7 +4,11 @@ var hotelRoomRateDisplay = document.getElementById("00N0b000009gotC");
 var hotelRoomRate = 0;
 var totalRevenueDisplay = document.getElementById("totalRevenueDisplay");
 var totalRevenue = 0;
+var coefficientROIDisplay = document.getElementById("coefROI");
+var coefficientROIInput = document.getElementById("00N0b00000CoagY");
+var coefficientROI = 0;
 var finalDTPIDAmountDisplay = document.getElementById("finalDTPIDAmountDisplay");
+var finalDTPIDAmountDisplay2 = document.getElementById("finalDTPIDAmountDisplay2");
 var finalDTPIDAmount = 0;
 var amountRequestedDisplay = document.getElementById("00N0b00000BQW8Z");
 var amountRequested = 0;
@@ -15,6 +19,8 @@ var labelIfYes = document.getElementById("labelIfYes");
 var mobileDisplay = document.getElementById("mobile");
 var mobileValue = "";
 var currentDate = document.getElementById("00N0b00000CclxK");
+var startDate = "";
+var enterDate = document.getElementById("enterDate");
 
 let peakHotelRoomNightsDisplay = document.getElementById("00N0b00000CnNpw");
 let peakHotelRoomNights = 0;
@@ -26,7 +32,7 @@ let shownPercentInventoryAtPeakDisplay = document.getElementById("shownInventory
 let submitButton = document.getElementById("submit");
 let setHigherPercentage = document.getElementById("setHigherPercentage");
 let addRooms = document.getElementById("addRooms");
-let approvedAmount = document.getElementById("00N0b00000Cnohu");
+//let approvedAmount = document.getElementById("00N0b00000Cnohu");
 
 peakHotelRoomNightsDisplay.addEventListener("change", function(){
 	peakHotelRoomNightsDisplay.value = parseFloat(peakHotelRoomNightsDisplay.value.replace(/,/g, ''));
@@ -89,7 +95,6 @@ amountRequestedDisplay.addEventListener("change", function(){
 	amountRequested = Number(this.value);
 	checkRequested();
 	amountRequestedDisplay.value = numberWithCommas(amountRequested);
-	approvedAmount.value = amountRequested;
 })
 
 checkboxDallas.addEventListener("change", function(){
@@ -104,8 +109,20 @@ mobileDisplay.addEventListener("change", function(){
 })
 
 function doMaximumEligibleCalculations(){
+	//stimulus award checker
 	totalRevenue = hotelRoomNight * hotelRoomRate;
-	finalDTPIDAmount = Math.floor(totalRevenue / 10);
+
+	if(startDate.getFullYear() === 2020) {
+		console.log(startDate.getFullYear());
+		console.log("doing stimulus winner");
+		coefficientROI = 6.67;
+	} else {
+		console.log("not applicable for stimulus award");
+		coefficientROI = 10;
+	}
+	coefficientROIDisplay.textContent = coefficientROI;
+	coefficientROIInput.value = coefficientROI;
+	finalDTPIDAmount = Math.ceil(totalRevenue / coefficientROI);
 	checkIfOverMax();
 }
 
@@ -113,14 +130,13 @@ function checkRequested(){
 	if(amountRequested > finalDTPIDAmount){
 		amountRequested = finalDTPIDAmount;
 		amountRequestedDisplay.value = numberWithCommas(amountRequested);
-		approvedAmount.value = amountRequested;
 	}
 }
 
 function displayMaximumEligibleCalculations(){
 	totalRevenueDisplay.textContent = numberWithCommas(totalRevenue);
 	finalDTPIDAmountDisplay.textContent = numberWithCommas(finalDTPIDAmount);
-	approvedAmount.value = finalDTPIDAmount;
+	finalDTPIDAmountDisplay2.textContent = numberWithCommas(finalDTPIDAmount);
 }
 
 function checkIfOverMax(){
@@ -149,9 +165,7 @@ $(document).ready(function () {
         minDate: 0,
         onSelect: function () {
             var dt2 = $('#00N0b000007v1qc');
-            var startDate = $(this).datepicker('getDate');
-            //add 30 days to selected date
-            startDate.setDate(startDate.getDate() + 30);
+            startDate = $(this).datepicker('getDate');
             var minDate = $(this).datepicker('getDate');
             var dt2Date = dt2.datepicker('getDate');
             //difference in days. 86400 seconds in day, 1000 ms in second
@@ -166,7 +180,13 @@ $(document).ready(function () {
                     dt2.datepicker('setDate', startDate);
             }
             //first day which can be selected in dt2 is selected date in dt1
-            dt2.datepicker('option', 'minDate', minDate);
+			dt2.datepicker('option', 'minDate', minDate);
+			console.log("In date picker: " + startDate.getFullYear());
+			console.log("In date picker, full date:" + startDate);
+			enterDate.classList.add("hide");
+			doMaximumEligibleCalculations();
+			checkRequested();
+			displayMaximumEligibleCalculations();
         }
     });
     $('#00N0b000007v1qc').datepicker({

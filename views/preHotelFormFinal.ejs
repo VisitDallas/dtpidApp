@@ -83,11 +83,18 @@
 
 	<!-- Header -->
 	<div>
-		<h3>DTPID Pre-Event Hotel Application and Budget Form</h3>
-		<h5><em>Submitted 60 days prior to Event Start</em></h5>
+		<h2>Dallas TPID Pre-Event Hotel Application</h2>
+		<h4><em>Submit 60 days prior to Event Start</em></h4>
 	</div>
 	
 	<div class="form-horizontal">
+
+	<div class="jumbotron">
+		<p>Limited Dallas TPID COVID-19 stimulus plan reduces the ROI to 6.67:1 from 10:1 for any event starting before 
+			January 1, 2021, in an effort to increase the maximum eligible incentive.</p>
+		<p>The standard ROI of 10:1 will resume on January 1, 2021.</p>
+	</div>
+
 	<!-- Hotel Information -->
 	<h3>Hotel Information:</h3>
 
@@ -257,40 +264,40 @@
 	</div>
 </div>
 
-	<div>
-		<h4>Available Funding and Return on Investment: <!-- <em>(attach contracted/requested room flow)</em> --></h4>
+	<h4>Calculate the Maximum Dallas TPID Incentive <!-- <em>(attach contracted/requested room flow)</em> --></h4>
 
+	<!-- Math section to calculate Room Revenue-->
+	<div class="form-group form-inline inLine">
+		<p class="inLine">
+			<strong>Contracted Room Nights</strong>
+			<input  id="00N0b000009got7" class="form-control inLine" name="00N0b000009got7" size="7" type="text" placeholder="0" required/>
+			x <strong>Contracted Room Rate </strong>$
+			<input  id="00N0b000009gotC" class="form-control inLine" name="00N0b000009gotC" size="4" type="text" placeholder="0" required/>	
+		= <strong>Total Revenue $<span id="totalRevenueDisplay">0</span> / <span id="coefROI">10</span></strong> =
+		<strong>$<span id="finalDTPIDAmountDisplay">0</span> Maximum Dallas TPID Incentive</strong>  
+		</p>
+		<p id="enterDate" class="showcaseRed">Please enter an Event Start Date</p>
+	</div>
+	<div class="hide">
+		<p>Pre App ROI Coefficient:<input  id="00N0b00000CoagY" name="00N0b00000CoagY" size="20" type="text" /><br></p>
+	</div>
+
+	<div>
 		<ul>
-			<li>Your anticipated number of <strong>Hotel Room Nights</strong> as determined by contracted room block</li>
+			<li>Your anticipated number of <strong>Contracted Room Nights</strong> as determined by contracted room block</li>
 			<li>Multiplied by <strong>Contracted Hotel Rate</strong> to get <strong>Total Revenue</strong></li>
-			<li>Divide <strong>Total Revenue</strong> by 10 to get the 10:1 required ROI = <strong>Maximum Eligible DTPID Amount</strong></li>
+			<li>For Events before 1/1/2021, divide <strong>Total Revenue</strong> by 6.67 for <strong>Maximum Dallas TPID Incentive (limited DTPID stimulus)</strong></li>
+			<li>For Events after 1/1/2021, divide <strong>Total Revenue</strong> by 10 for <strong>Maximum Dallas TPID Incentive</strong></li>
 		</ul>
 	</div>
 
-	<div class="form-group form-inline inLine">
- 	 	<p class="inLine"><strong>Hotel Room Nights</strong>
-			<input  id="00N0b000009got7" class="form-control inLine" name="00N0b000009got7" size="7" type="text" placeholder="0" required/>
-	 		<strong>Avg. Room Rate </strong>$
-			<input  id="00N0b000009gotC" class="form-control inLine" name="00N0b000009gotC" size="4" type="text" placeholder="0" required/>	
-		= <strong>Total Revenue $<span id="totalRevenueDisplay">0</span> / 10 (for ROI)</strong> =</p>
-	</div>
-	<div class="center">
-	 	<h4>
-	 	$<span id="finalDTPIDAmountDisplay">0</span><strong> Maximum Eligible DTPID Amount</strong>
-	 	</h4>			
- 	</div>
+	<!-- Math section to calculate total eligible DTPID Amount-->
 
 	<div class="form-group form-inline">
-		<label>DTPID Funds Requested For Pre-Approval: $</label>
+		<label>Dallas TPID Incentive Funds Requested: $</label>
 		<input id="00N0b00000BQW8Z" class="form-control" name="00N0b00000BQW8Z" size="20" type="text" placeholder="0" required/>
 
-		<div class="hide">
-			<label>Approved Amount:</label>
-			<input  id="00N0b00000Cnohu" name="00N0b00000Cnohu" size="20" type="text" />
-		</div>
-		
-
-		<p>This cannot be higher than the Maximum Eligible Amount</p>
+		<p>This cannot be higher than the Maximum Dallas TPID Incentive ($<span id="finalDTPIDAmountDisplay2">0</span>)</p>
 	</div>
 
 	<div class="form-group">
