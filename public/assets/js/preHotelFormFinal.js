@@ -38,7 +38,7 @@ peakHotelRoomNightsDisplay.addEventListener("change", function(){
 	peakHotelRoomNightsDisplay.value = parseFloat(peakHotelRoomNightsDisplay.value.replace(/,/g, ''));
 	peakHotelRoomNights = Number(this.value);
 	calculatePercentInventory();
-	underPercentage();
+	//underPercentage();
 	peakHotelRoomNightsDisplay.value = numberWithCommas(peakHotelRoomNights);
 });
 
@@ -46,7 +46,7 @@ totalSleepingRoomsDisplay.addEventListener("change", function(){
 	totalSleepingRoomsDisplay.value = parseFloat(totalSleepingRoomsDisplay.value.replace(/,/g, ''));
 	totalSleepingRooms = Number(this.value);
 	calculatePercentInventory();
-	underPercentage();
+	//underPercentage();
 	totalSleepingRoomsDisplay.value = numberWithCommas(totalSleepingRooms);
 });
 
@@ -348,10 +348,6 @@ function inputCurrentDate(){
 window.onload = function() {
   inputCurrentDate();
 };
-
-
-
-
 
 
 
