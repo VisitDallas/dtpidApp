@@ -4,6 +4,9 @@ var hotelRoomRateDisplay = document.getElementById("00N0b000009gtXE");
 var hotelRoomRate = 0;
 var totalRevenueDisplay = document.getElementById("totalRevenueDisplay");
 var totalRevenue = 0;
+var coefficientROIDisplay = document.getElementById("coefROI");
+var coefficientROIInput = document.getElementById("00N0b00000CoxKP");
+var coefficientROI = 0;
 var finalDTPIDAmountDisplay = document.getElementById("finalDTPIDAmountDisplay");
 var finalDTPIDAmount = 0;
 var amountRequested = 0;
@@ -16,6 +19,8 @@ var hotelName = "";
 var eventNameDisplay = document.getElementById("00N0b000007uwKK");
 var eventName = "";
 var currentDate = document.getElementById("00N0b00000CclxP");
+
+var startDate = "";
 
 $(".room-fields").change(function(){
 	if(this.id == "00N0b000009gtVs"){
@@ -61,20 +66,39 @@ function checkRequested(){
 	amountRequestedDisplay.value = numberWithCommas(amountRequested);
 }
 
-function doMaximumEligibleCalculations(){
-	totalRevenue = round(hotelRoomNight * hotelRoomRate, 2);
-	finalDTPIDAmount = round(totalRevenue / 10, 2);
-
-	checkIfOverMax();
-
+function displayMaximumEligibleCalculations(){
 	totalRevenueDisplay.textContent = numberWithCommas(totalRevenue);
 	finalDTPIDAmountDisplay.textContent = numberWithCommas(finalDTPIDAmount);
 }
 
+function doMaximumEligibleCalculations(){
+	//stimulus award checker
+	totalRevenue = hotelRoomNight * hotelRoomRate;
+
+	console.log(totalRevenue + " - Total Revenue");
+	console.log(hotelRoomNight + " - Hotel room Night");
+	console.log(hotelRoomRate + " - Hotel Room Rate");
+
+	if(startDate.getFullYear() === 2020) {
+		console.log(startDate.getFullYear());
+		console.log("doing stimulus winner");
+		coefficientROI = 6.67;
+	} else {
+		console.log("not applicable for stimulus award");
+		coefficientROI = 10;
+	}
+	coefficientROIDisplay.textContent = coefficientROI;
+	coefficientROIInput.value = coefficientROI;
+	finalDTPIDAmount = Math.ceil(totalRevenue / coefficientROI);
+	console.log(finalDTPIDAmount + "final DTPID amount");
+	displayMaximumEligibleCalculations();
+	checkIfOverMax();
+}
+
 //check to make sure this is the correct number
 function checkIfOverMax(){
-	if (finalDTPIDAmount > 100000){
-		finalDTPIDAmount = 100000;
+	if (finalDTPIDAmount > 150000){
+		finalDTPIDAmount = 150000;
 	}
 }
 
@@ -123,9 +147,7 @@ $(document).ready(function () {
         //minDate: 0,
         onSelect: function () {
             var dt2 = $('#00N0b000007v1qc');
-            var startDate = $(this).datepicker('getDate');
-            //add 30 days to selected date
-            startDate.setDate(startDate.getDate() + 30);
+            startDate = $(this).datepicker('getDate');
             var minDate = $(this).datepicker('getDate');
             var dt2Date = dt2.datepicker('getDate');
             //difference in days. 86400 seconds in day, 1000 ms in second
@@ -140,7 +162,12 @@ $(document).ready(function () {
                     dt2.datepicker('setDate', startDate);
             }
             //first day which can be selected in dt2 is selected date in dt1
-            dt2.datepicker('option', 'minDate', minDate);
+			dt2.datepicker('option', 'minDate', minDate);
+			console.log("In date picker: " + startDate.getFullYear());
+			console.log("In date picker, full date:" + startDate);
+			doMaximumEligibleCalculations();
+			checkRequested();
+			displayMaximumEligibleCalculations();
         }
     });
     $('#00N0b000007v1qc').datepicker({
