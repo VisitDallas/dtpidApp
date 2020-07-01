@@ -319,7 +319,7 @@ function addDTPIDFundingCategories(){
 }
 
 function checkIfOverMax(){
-	if (finalDTPIDAmount >= 25000){
+	if (finalDTPIDAmount > 24999){
 		finalDTPIDAmount = 25000;
 		finalDTPIDAmountDisplay.textContent = numberWithCommas(finalDTPIDAmount);
 		totalDTPIDFundsDisplay.textContent = numberWithCommas(finalDTPIDAmount);
