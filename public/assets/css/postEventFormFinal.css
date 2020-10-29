@@ -1,10 +1,11 @@
 body {
-	background-color: #0E4D92;
+    padding: 30px 30px 0 30px;
 }
 
 .navbar {
 	background: #082037;
 	border: 0px;
+    padding: 20px;
 }
 
 .navbar .navbar-nav>li>a {
@@ -15,11 +16,14 @@ body {
 	color: white;
 }
 
+a {
+    color: #23527c;
+}
+
 .container {
 	background-color: white;
 	padding: 20px;
 	margin: 0px auto;
-	border: 6px solid rgb(4, 34, 70);
 	font-family: open-sans,Helvetica,Arial,Arial Unicode,Lucida Sans Unicode,sans-serif;
 }
 
@@ -45,11 +49,11 @@ i {
 .hide {
 	display: none;
 }
-		
+
 .inLineStart {
 	display: inline-block; margin-right: 10px;
 }
-		
+
 .inLineEnd {
 	display: inline-block;
 }
@@ -79,11 +83,11 @@ i {
 .ui-datepicker {
 background: #000000; /* Old browsers */
 background: #000000 -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ */
-background: #000000 -webkit-gradient(linear, left top, left bottom, color- 
+background: #000000 -webkit-gradient(linear, left top, left bottom, color-
 stop(0%,#000000)), color-stop(100%,#34495e); /* Chrome,Safari4+ */
-background: #000000 -webkit-linear-gradient(top,#000000 0%, #34495e 100%); /* 
+background: #000000 -webkit-linear-gradient(top,#000000 0%, #34495e 100%); /*
 Chrome10+,Safari5.1+ */
-background: #000000 -o-linear-gradient(top,#000000 0%, #34495e 100%); /* Opera11.10+ 
+background: #000000 -o-linear-gradient(top,#000000 0%, #34495e 100%); /* Opera11.10+
 */
 background: #000000 -ms-linear-gradient(top,#000000 0%, #34495e 100%); /* IE10+ */
 background: #000000 linear-gradient(top,#000000 0%, #34495e 100%); /* W3C */
@@ -211,5 +215,18 @@ width: 300px;
 	background: #0E4D92;
 }
 
+.btn-submit {
+    margin-top: 40px;
+}
 
+.btn-submit .btn {
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 0;
+    background-color: #001B48;
+    border: none;
+}
 
+.btn-submit .btn:hover {
+    background-color: #001538;
+}

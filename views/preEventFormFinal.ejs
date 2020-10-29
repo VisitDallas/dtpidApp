@@ -1,11 +1,11 @@
-<%- include ('partials/header.ejs') %> 
+<%- include ('partials/header.ejs') %>
 
 		<title>DTPID Pre Event Form Submission</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/preEventFormFinal.css">
 	</head>
 	<body>
 
-	<%- include ('partials/navbar.ejs') %> 
+	<%- include ('partials/navbar.ejs') %>
 
 <div class="container">
 
@@ -26,7 +26,7 @@
 		</div>
 
 
-		<!-- Introduction to the Form --> 
+		<!-- Introduction to the Form -->
 		<div class="form-group form-inline">
 			<h1>DTPID Pre Event Form Submission</h1>
 			<div class="hide">
@@ -45,10 +45,10 @@
 			<input class="form-control col-sm-2" id="truthCheckbox" name="truthCheckbox" type="checkbox" value="0">
 			<p class="col-sm-10">I certify that the information submitted in this application is factually true and correct to the best of my knowledge.  I further understand that any false statements may result in denial or revocation of funding. </p>
 		</div>
-		
+
 		<!-- Contact Information -->
 		<div>
-			
+
 			<%- include ('partials/contactInformation.ejs') %>
 
 			<!-- Third Row -->
@@ -82,7 +82,7 @@
 				<div class="col-sm-2">
 					<input  id="city" class="form-control orgInfo" name="city" size="20" type="text" value="Dallas"/>
 				</div>
-				
+
 				<!-- <label for="state" class="col-sm-2 control-label">
 					State:
 				</label> -->
@@ -129,8 +129,8 @@
 
 		<!-- Event Information -->
 		<div class="form-horizontal">
-			
-			<%- include ('partials/eventInformation') %> 
+
+			<%- include ('partials/eventInformation') %>
 
 			<div class="form-group">
 				<label class="col-sm-2 control-label">
@@ -143,7 +143,7 @@
 				<label class="hide col-sm-2 control-label">
 					Lead Type:
 				</label>
-				
+
 				<div class="col-sm-4">
 					<select class="hide" id="00N0b00000Cd4jc" name="00N0b00000Cd4jc" title="Lead Type">
 						<option value="Event">Event</option>
@@ -159,14 +159,14 @@
 				<div class="col-sm-3">
 					<input id="00N0b000007v1qm" class="form-control" name="00N0b000007v1qm" type="checkbox" value="0"/>
 				</div>
-				
+
 				<label class="hide col-sm-2 control-label" id="labelTimesFunded">
-					# of times funded:	
+					# of times funded:
 				</label>
 				<div class="col-sm-4">
 					<input  id="00N0b000007v56k" class="form-control hide" name="00N0b000007v56k" size="5" type="text" value="0" />
 				</div>
-				
+
 			</div>
 
 			<div class="form-group">
@@ -178,7 +178,7 @@
 				</div>
 
 				<label class="hide col-sm-2 control-label" id="ocaField">
-					OAC Field:	
+					OAC Field:
 				</label>
 				<div class="col-sm-4">
 					<input  id="00N0b00000Bw1rS" class="hide form-control" name="00N0b00000Bw1rS" size="5" type="text" value="" />
@@ -213,18 +213,18 @@
 			<h3>Event Venue:</h3>
 
 			<div class="form-group">
-				
+
 
 				<label class="col-sm-2 control-label">
 					Check if Event Venue is different from Organization.
-				</label>	
+				</label>
 
 				<div class="col-sm-3">
 					<input id="locationCheck" class="form-control" name="LocationCheck" type="checkbox" value="0" />
 				</div>
-				
+
 		</div>
-			
+
 		<div class="form-horizontal">
 			<div class="form-group">
 				<label class="col-sm-2 control-label">Event Venue:</label>
@@ -254,7 +254,7 @@
 							<option value="TX">Texas</option>
 						</select>
 					</div>
-					
+
 					<label class="col-sm-1 control-label">Zip:</label>
 					<div class="col-sm-3">
 						<input  id="00N0b00000BOCDh" class="form-control eventLocation" name="00N0b00000BOCDh" placeholder="eg.75201" size="20" type="text" readonly/>
@@ -281,31 +281,31 @@
 				</div>
 			</div>
 		</div>
-			
+
 			<div class="form-group">
 				<div class="col-sm-1">
-				
+
 				</div>
 				<div class="col-sm-11">
 				<ul>
 					<li id="estimationChoice0">Please Choose an option</li>
 					<li id="estimationChoice1" class="hide">Estimated total number of attendees of the event multiplied by factor.</li>
 					<li id="estimationChoice2" class="hide">Estimated number of trackable hotel room nights through hotel booking codes.</li>
-					<li id="estimationChoice3" class="hide">Estimated total number of ticket sales sold or registartions from outside of the DFW Metropolitan Statistical Area (MSA) multiplied by factor.</li>					
+					<li id="estimationChoice3" class="hide">Estimated total number of ticket sales sold or registartions from outside of the DFW Metropolitan Statistical Area (MSA) multiplied by factor.</li>
 					<li id="estimationResult" class="hide">
 						<!-- Pre Event DTPID Number Input: -->
 						<div class="col-sm-2 noPaddingRight">
 						<input  id="00N0b000007vPGg" class="form-control" name="00N0b000007vPGg" type="text" required/>
 						</div>
 						<div class="col-sm-10 noPaddingLeft">
-						<p  class="inLine"> x <span id="estimationChoiceFactorDisplay">0</span> = <span id="estimationChoiceResultDisplay">0</span> Total Room Nights</p>	
+						<p  class="inLine"> x <span id="estimationChoiceFactorDisplay">0</span> = <span id="estimationChoiceResultDisplay">0</span> Total Room Nights</p>
 						</div>
 					</li>
-				</ul>				
+				</ul>
 				</div>
 			</div>
 		</div>
-		</div>	
+		</div>
 
 		<!-- Math section -->
 		<div>
@@ -327,7 +327,7 @@
 				<input  id="00N0b000009gotC" class="form-control inLine" name="00N0b000009gotC" size="3" type="text" value="168" readonly required/>
 				<p class="inLine"> = Total Revenue $<span id="totalRevenueDisplay">0</span> <i class="fas fa-divide"></i> 10 (for ROI)</p>
 			</div>
-			<div>	
+			<div>
 			<p class="highlight">= $<span id="finalDTPIDAmountDisplay">0</span> Maximum Eligible DTPID Amount</p>
 			</div>
 		</div>
@@ -450,11 +450,13 @@
 
 		<p class="disclaimer"><strong>Print this screen for your records before submitting. (Control+P or Command+P)</strong></p>
 
-		<input type="submit" class="btn btn-primary btn-lg btn-block" id="submit" name="submit" disabled>
+		<p class="text-center btn-submit">
+			<input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" disabled>
+		</p>
 
 	</form>
 
 </div>
 <script type="text/javascript" src="assets/js/preEventFormFinal.js"></script>
 
-<%- include ('partials/footer.ejs') %> 
+<%- include ('partials/footer.ejs') %>

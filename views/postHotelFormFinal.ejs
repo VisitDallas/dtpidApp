@@ -5,10 +5,10 @@
 </head>
 <body>
 
-	<%- include ('partials/navbar.ejs') %> 
+	<%- include ('partials/navbar.ejs') %>
 
 	<div class="container">
-	
+
 	<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" onsubmit="return myFunction();">
 
 	<!-- <input type=hidden name='captcha_settings' value='{"keyname":"preHotel","fallback":"true","orgId":"00D0b000000RDhe","ts":""}'> -->
@@ -17,15 +17,15 @@
 
 		<h3>DTPID Post-Event Hotel Reimbursment Form</h3>
 		<p><em>Please complete this form 30 days post your event</em></p>
-		
+
 		<div class="jumbotron">
-			<p>Limited Dallas TPID COVID-19 stimulus plan reduces the ROI to 6.67:1 from 10:1 and 
-				reduces room requirement to 10 rooms on peak for all hotels for events starting before 
+			<p>Limited Dallas TPID COVID-19 stimulus plan reduces the ROI to 6.67:1 from 10:1 and
+				reduces room requirement to 10 rooms on peak for all hotels for events starting before
 				January 1, 2021, in an effort to increase the maximum eligible incentive.</p>
 			<p>The standard ROI of 10:1 and 10% inventory requirement will resume on January 1, 2021.</p>
 		</div>
 
-		<div class="hide">	
+		<div class="hide">
 			<!-- Application_Type: -->
 			<select  id="00N0b000007wAxU" name="00N0b000007wAxU" title="Application_Type">
 				<option value="Hotel_Post-Event">Hotel Post-Event</option>
@@ -137,7 +137,7 @@
 					<!-- Post App Hotel Room Rate: -->
 					<input  id="00N0b000009gtXE" class="form-control room-fields" name="00N0b000009gtXE" size="5" type="text" placeholder="0" required/>
 				<!-- <p class="inLine"> -->= <strong>Total Revenue $<span id="totalRevenueDisplay">0</span> / <span id="coefROI">10</span></strong> =
-				<strong>$<span id="finalDTPIDAmountDisplay">0</span> Maximum Dallas TPID Incentive</strong>  
+				<strong>$<span id="finalDTPIDAmountDisplay">0</span> Maximum Dallas TPID Incentive</strong>
 			</p>
 		 </div>
 		 <div class="hide">
@@ -154,7 +154,7 @@
 
  			<div class="form-group">
 				<label class="col-sm-2 control-label">Actual Expenses for Reimbursement: $</label>
-				<div class="col-sm-9">	
+				<div class="col-sm-9">
 					<input  id="00N0b00000Cbqrv" class="form-control form-amounts" name="00N0b00000Cbqrv" size="20" type="text" placeholder="0" required/>
 				</div>
 			</div>
@@ -165,7 +165,7 @@
 
 		<p class="disclaimer"><strong>If you have any questions, please contact Sheryl Budelier at (214) 571-1337 or <a href="mailto:sheryl@dallastpid.com">Sheryl@dallastpid.com</a></strong></p>
 
-		<div>	
+		<div>
 			<p class="disclaimer"><strong>Please send pick-up report as a PDF attachment to <a href="#" onclick="javascript:myFunction(); return false;">Sheryl@dallastpid.com</a></strong></p>
 		</div>
 
@@ -173,7 +173,9 @@
 
 
 	<!-- <div class="g-recaptcha" data-sitekey="hotel"></div><br> -->
-	<input type="submit" class="btn btn-primary btn-lg btn-block" name="submit" onclick="javascript:myFunction()">
+	<p class="text-center btn-submit">
+		<input type="submit" class="btn btn-primary btn-lg" name="submit" onclick="javascript:myFunction()">
+	</p>
 
 	</form>
 	</div>
