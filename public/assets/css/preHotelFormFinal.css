@@ -17,6 +17,7 @@ a {
 	background: #082037;
 	border: 0px;
     padding: 20px;
+    border-radius: 0;
 }
 
 .navbar .navbar-nav>li>a {
