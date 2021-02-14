@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DTPID Pre-Event Hotel Application Form</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/lib/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/preHotelFormFinal.css">
-	<script type="text/javascript" src="assets/js/lib/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/lib/jquery-ui.js"></script>
-	<script type="text/javascript" src="assets/js/lib/bootstrap.min.js"></script>
+    <title>DTPID Pre-Event Hotel Application Form</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/lib/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/preHotelFormFinal.css">
+    <script type="text/javascript" src="assets/js/lib/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/lib/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -14,265 +14,296 @@
 
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
-<!-- <input type=hidden name='captcha_settings' value='{"keyname":"preHotel","fallback":"true","orgId":"00D0b000000RDhe","ts":""}'> -->
-<input type=hidden name="oid" value="00D0b000000RDhe">
-<input type=hidden name="retURL" value="http://www.dtpid.com/thank-you-for-submitting-your-request">
+    <!-- <input type=hidden name='captcha_settings' value='{"keyname":"preHotel","fallback":"true","orgId":"00D0b000000RDhe","ts":""}'> -->
+    <input type=hidden name="oid" value="00D0b000000RDhe">
+    <input type=hidden name="retURL" value="http://www.dtpid.com/thank-you-for-submitting-your-request">
 
-<div class="container">
+    <div class="container">
 
-	<div class="form-group form-inline hide" id="dateTester">
-		<label>
-			Application Date:
-		</label>
-		<span class="dateInput dateOnlyInput">
-			<input  id="00N0b00000CclxK" class="form-control" name="00N0b00000CclxK" placeholder="mm/dd/yyyy" size="12" type="text"/>
+        <div class="form-group form-inline hide" id="dateTester">
+            <label>
+                Application Date:
+            </label>
+            <span class="dateInput dateOnlyInput">
+			<input id="00N0b00000CclxK" class="form-control" name="00N0b00000CclxK" placeholder="mm/dd/yyyy" size="12"
+                   type="text"/>
 		</span>
-	</div>
+        </div>
 
-	<div class="col-sm-4">
-				<select class="hide" id="00N0b00000Cd4jc" name="00N0b00000Cd4jc" title="Lead Type">
-					<option value="Hotel">Hotel</option>
-				</select>
-			</div>
+        <div class="col-sm-4">
+            <select class="hide" id="00N0b00000Cd4jc" name="00N0b00000Cd4jc" title="Lead Type">
+                <option value="Hotel">Hotel</option>
+            </select>
+        </div>
 
-	<!-- Header -->
-	<div>
-		<h2>Dallas TPID Pre-Event Hotel Application</h2>
-		<h4><em>Submit 60 days prior to Event Start</em></h4>
-	</div>
+        <!-- Header -->
+        <div>
+            <h2>Dallas TPID Pre-Event Hotel Application</h2>
+            <h4><em>Submit 60 days prior to Event Start</em></h4>
+        </div>
 
-	<div class="form-horizontal">
+        <div class="form-horizontal">
 
-	<div class="jumbotron">
-		<p>Limited Dallas TPID COVID-19 stimulus plan for eligible District hotels removes the requirement of 10% of inventory on peak
-		to requiring a minimum of ten (10) rooms on peak. 
-			Group must book and consume before January 1, 2022.</p>
-		<p>The standard ROI of 10:1 and 10% inventory requirement will resume on January 1, 2022.</p>
-	</div>
+            <div class="jumbotron">
+                <p>Limited Dallas TPID COVID-19 stimulus plan for eligible District hotels removes the requirement of
+                    10% of inventory on peak
+                    to requiring a minimum of ten (10) rooms on peak.
+                    Group must book and consume before January 1, 2022.</p>
+                <p>The standard ROI of 10:1 and 10% inventory requirement will resume on January 1, 2022.</p>
+            </div>
 
-	<!-- Hotel Information -->
-	<h3>Hotel Information:</h3>
+            <!-- Hotel Information -->
+            <h3>Hotel Information:</h3>
 
-	<div class="form-group">
-		<label for="company" class="col-sm-2 control-label">
-			Hotel Name:
-		</label>
-		<div class="col-sm-9">
-			<input id="company" class="form-control" name="company" size="80" type="text" required/>
-		</div>
-	</div>
+            <div class="form-group">
+                <label for="company" class="col-sm-2 control-label">
+                    Hotel Name:
+                </label>
+                <div class="col-sm-9">
+                    <input id="company" class="form-control" name="company" size="80" type="text" required/>
+                </div>
+            </div>
 
-	<div class="hide">
-		<label>Application_Type:</label>
-		<select  id="00N0b000007wAxU" name="00N0b000007wAxU" title="Application_Type">
-		<option value="Hotel_Pre-Event">Hotel Pre-Event</option>
-		</select>
-	</div>
-<div class="form-group">
-		<label class="col-sm-2 control-label">
-			How many sleeping rooms does your property have?
-		</label>
-		<div class="col-sm-9">
-			<input id="00N0b00000Cmy6U" class="form-control" name="00N0b00000Cmy6U" size="20" type="text" placeholder="0" required/>
-		</div>
-</div>
-</div>
-	<!-- Contact Information -->
-	<div class="form-group">
-		<label for="first_name" class="col-sm-2 control-label">
-			First Name:
-		</label>
-		<div class="col-sm-9">
-			<input  id="first_name" class="form-control" name="first_name" size="20" type="text" required/>
-		</div>
-	</div>
+            <div class="hide">
+                <label>Application_Type:</label>
+                <select id="00N0b000007wAxU" name="00N0b000007wAxU" title="Application_Type">
+                    <option value="Hotel_Pre-Event">Hotel Pre-Event</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    How many sleeping rooms does your property have?
+                </label>
+                <div class="col-sm-9">
+                    <input id="00N0b00000Cmy6U" class="form-control" name="00N0b00000Cmy6U" size="20" type="text"
+                           placeholder="0" required/>
+                </div>
+            </div>
+            <!-- Contact Information -->
+            <div class="form-group">
+                <label for="first_name" class="col-sm-2 control-label">
+                    First Name:
+                </label>
+                <div class="col-sm-9">
+                    <input id="first_name" class="form-control" name="first_name" size="20" type="text" required/>
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label for="last_name" class="col-sm-2 control-label">
-			Last Name:
-		</label>
-		<div class="col-sm-9">
-			<input  id="last_name" class="form-control" maxlength="80" name="last_name" size="20" type="text" required/>
-		</div>
-	</div>
+            <div class="form-group">
+                <label for="last_name" class="col-sm-2 control-label">
+                    Last Name:
+                </label>
+                <div class="col-sm-9">
+                    <input id="last_name" class="form-control" maxlength="80" name="last_name" size="20" type="text"
+                           required/>
+                </div>
+            </div>
 
 
-	<div class="form-group">
-		<label for="mobile" class="col-sm-2 control-label">
-			Contact Phone:
-		</label>
-		<div class="col-sm-9">
-			<input class="form-control" id="mobile" name="mobile" size="20" type="text" required/>
-		</div>
-	</div>
+            <div class="form-group">
+                <label for="mobile" class="col-sm-2 control-label">
+                    Contact Phone:
+                </label>
+                <div class="col-sm-9">
+                    <input class="form-control" id="mobile" name="mobile" size="20" type="text" required/>
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label for="email" class="col-sm-2 control-label">
-			Contact Email:
-		</label>
-		<div class="col-sm-9">
-			<input class="form-control" id="email" name="email" size="20" type="text" required/>
-		</div>
-	</div>
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">
+                    Contact Email:
+                </label>
+                <div class="col-sm-9">
+                    <input class="form-control" id="email" name="email" size="20" type="text" required/>
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label class="col-sm-2 control-label">
-			GM Full Name:
-		</label>
-		<div class="col-sm-9">
-			<input id="00N0b0000088ppS" class="form-control" name="00N0b0000088ppS" size="20" type="text" required/>
-		</div>
-	</div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    GM Full Name:
+                </label>
+                <div class="col-sm-9">
+                    <input id="00N0b0000088ppS" class="form-control" name="00N0b0000088ppS" size="20" type="text"
+                           required/>
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label class="col-sm-2 control-label">
-			GM Email:
-		</label>
-		<div class="col-sm-9 control-label">
-			<input  id="00N0b00000BgxXl" class="form-control" name="00N0b00000BgxXl" size="20" type="text" required/>
-		</div>
-	</div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    GM Email:
+                </label>
+                <div class="col-sm-9 control-label">
+                    <input id="00N0b00000BgxXl" class="form-control" name="00N0b00000BgxXl" size="20" type="text"
+                           required/>
+                </div>
+            </div>
 
-	<!-- Event Information -->
-	<h3>Event Information:</h3>
+            <!-- Event Information -->
+            <h3>Event Information:</h3>
 
-	<div class="form-group">
-		<label class="col-sm-2 control-label">
-			Event Name:
-		</label>
-		<div class="col-sm-9">
-			<input id="00N0b000007uwKK" class="form-control" name="00N0b000007uwKK" size="40" type="text" required/>
-		</div>
-	</div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    Event Name:
+                </label>
+                <div class="col-sm-9">
+                    <input id="00N0b000007uwKK" class="form-control" name="00N0b000007uwKK" size="40" type="text"
+                           required/>
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label class="col-sm-2 control-label">
-			Event Start Date:
-		</label>
-		<div class="col-sm-9">
-			<input type="text" name="00N0b000007v1mP" id="00N0b000007v1mP" class="form-control" placeholder="mm/dd/yyyy">
-		</div>
-	</div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    Event Start Date:
+                </label>
+                <div class="col-sm-9">
+                    <input type="text" name="00N0b000007v1mP" id="00N0b000007v1mP" class="form-control"
+                           placeholder="mm/dd/yyyy">
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label class="col-sm-2 control-label">
-			Event End Date:
-		</label>
-		<div class="col-sm-9">
-			<input type="text" name="00N0b000007v1qc" id="00N0b000007v1qc" class="form-control" placeholder="mm/dd/yyyy">
-		</div>
-	</div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    Event End Date:
+                </label>
+                <div class="col-sm-9">
+                    <input type="text" name="00N0b000007v1qc" id="00N0b000007v1qc" class="form-control"
+                           placeholder="mm/dd/yyyy">
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label class="col-sm-2 control-label">
-			Peak Hotel Room Nights for Event:
-		</label>
-		<div class="col-sm-9">
-			<input id="00N0b00000CnNpw" class="form-control" name="00N0b00000CnNpw" size="20" type="text" placeholder="0" required/>
-		</div>
-	</div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    Peak Hotel Room Nights for Event:
+                </label>
+                <div class="col-sm-9">
+                    <input id="00N0b00000CnNpw" class="form-control" name="00N0b00000CnNpw" size="20" type="text"
+                           placeholder="0" required/>
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label class="col-sm-2 control-label">
-			<span id="roomRequirement">% of Inventory at Peak*: </span>
-		</label>
-		<div class="col-sm-9">
-			<input id="shownInventoryAtPeakDisplay" class="form-control" name="shownInventoryAtPeakDisplay" size="20" type="text" placeholder="0" required readonly/>
-			<li id="setHigherPercentage" class="hide showcaseRed">This number has to be higher than 10% for application to be accepted</li>
-			<li id="addRooms" class="hide showcaseRed">Input "Total Sleeping Rooms at Property"</li>
-		</div>
-	</div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    <span id="roomRequirement">% of Inventory at Peak*: </span>
+                </label>
+                <div class="col-sm-9">
+                    <input id="shownInventoryAtPeakDisplay" class="form-control" name="shownInventoryAtPeakDisplay"
+                           size="20" type="text" placeholder="0" required readonly/>
+                    <li id="setHigherPercentage" class="hide showcaseRed">This number has to be higher than 10% for
+                        application to be accepted
+                    </li>
+                    <li id="addRooms" class="hide showcaseRed">Input "Total Sleeping Rooms at Property"</li>
+                </div>
+            </div>
 
-	<div class="form-group hide">
-		<label class="col-sm-2 control-label">
-			% of Inventory at Peak:
-		</label>
-		<div class="col-sm-9">
-			<input id="00N0b000009gTge" class="form-control" name="00N0b000009gTge" size="20" type="text" placeholder="0" required readonly/>
-		</div>
-	</div>
+            <div class="form-group hide">
+                <label class="col-sm-2 control-label">
+                    % of Inventory at Peak:
+                </label>
+                <div class="col-sm-9">
+                    <input id="00N0b000009gTge" class="form-control" name="00N0b000009gTge" size="20" type="text"
+                           placeholder="0" required readonly/>
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label class="col-sm-2 control-label">
-			Event Decision Date:
-		</label>
-		<div class="col-sm-9">
-			<input type="text" name="00N0b00000Bf6oE" id="00N0b00000Bf6oE" class="form-control" placeholder="mm/dd/yyyy">
-		</div>
-	</div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    Event Decision Date:
+                </label>
+                <div class="col-sm-9">
+                    <input type="text" name="00N0b00000Bf6oE" id="00N0b00000Bf6oE" class="form-control"
+                           placeholder="mm/dd/yyyy">
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label class="col-sm-2 control-label">
-			Previously in Dallas (check if yes):
-		</label>
-		<div class="col-sm-3">
-			<input id="00N0b0000082r6W" class="form-control" name="00N0b0000082r6W" type="checkbox" value="1" />
-		</div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    Previously in Dallas (check if yes):
+                </label>
+                <div class="col-sm-3">
+                    <input id="00N0b0000082r6W" class="form-control" name="00N0b0000082r6W" type="checkbox" value="1"/>
+                </div>
 
-		<label id="labelIfYes" class="hide col-sm-2 control-label">
-			Last Event Date:
-		</label>
-		<div class="col-sm-4">
-			<input type="text" name="00N0b0000082rE7" id="00N0b0000082rE7" class="form-control hide" placeholder="mm/dd/yyyy">
-		</div>
-	</div>
-</div>
+                <label id="labelIfYes" class="hide col-sm-2 control-label">
+                    Last Event Date:
+                </label>
+                <div class="col-sm-4">
+                    <input type="text" name="00N0b0000082rE7" id="00N0b0000082rE7" class="form-control hide"
+                           placeholder="mm/dd/yyyy">
+                </div>
+            </div>
+        </div>
 
-	<h4>Calculate the Maximum Dallas TPID Incentive <!-- <em>(attach contracted/requested room flow)</em> --></h4>
+        <h4>Calculate the Maximum Dallas TPID Incentive <!-- <em>(attach contracted/requested room flow)</em> --></h4>
 
-	<!-- Math section to calculate Room Revenue-->
-	<div class="form-group form-inline inLine">
-		<p class="inLine">
-			<strong>Contracted Room Nights</strong>
-			<input  id="00N0b000009got7" class="form-control inLine" name="00N0b000009got7" size="7" type="text" placeholder="0" required/>
-			x <strong>Contracted Room Rate </strong>$
-			<input  id="00N0b000009gotC" class="form-control inLine" name="00N0b000009gotC" size="4" type="text" placeholder="0" required/>
-		= <strong>Total Revenue $<span id="totalRevenueDisplay">0</span> / <span id="coefROI">10</span></strong> =
-		<strong>$<span id="finalDTPIDAmountDisplay">0</span> Maximum Dallas TPID Incentive</strong>
-		</p>
-		<p id="enterDate" class="showcaseRed">Please enter an Event Start Date</p>
-	</div>
-	<div class="hide">
-		<p>Pre App ROI Coefficient:<input  id="00N0b00000CoagY" name="00N0b00000CoagY" size="20" type="text" /><br></p>
-	</div>
+        <!-- Math section to calculate Room Revenue-->
+        <div class="form-group form-inline inLine">
+            <p class="inLine">
+                <strong>Contracted Room Nights</strong>
+                <input id="00N0b000009got7" class="form-control inLine" name="00N0b000009got7" size="7" type="text"
+                       placeholder="0" required/>
+                x <strong>Contracted Room Rate </strong>$
+                <input id="00N0b000009gotC" class="form-control inLine" name="00N0b000009gotC" size="4" type="text"
+                       placeholder="0" required/>
+                = <strong>Total Revenue $<span id="totalRevenueDisplay">0</span> / <span id="coefROI">10</span></strong>
+                =
+                <strong>$<span id="finalDTPIDAmountDisplay">0</span> Maximum Dallas TPID Incentive</strong>
+            </p>
+            <p id="enterDate" class="showcaseRed">Please enter an Event Start Date</p>
+        </div>
+        <div class="hide">
+            <p>Pre App ROI Coefficient:<input id="00N0b00000CoagY" name="00N0b00000CoagY" size="20" type="text"/><br>
+            </p>
+        </div>
 
-	<div>
-		<ul>
-			<li>Your anticipated number of <strong>Contracted Room Nights</strong> as determined by contracted room block</li>
-			<li>Multiplied by <strong>Contracted Hotel Rate</strong> to get <strong>Total Room Revenue</strong></li>
-			<li>Divide <strong>Total Room Revenue</strong> by 10 for <strong>Maximum Dallas TPID Incentive</strong></li>
-		</ul>
-	</div>
+        <div>
+            <ul>
+                <li>Your anticipated number of <strong>Contracted Room Nights</strong> as determined by contracted room
+                    block
+                </li>
+                <li>Multiplied by <strong>Contracted Hotel Rate</strong> to get <strong>Total Room Revenue</strong></li>
+                <li>Divide <strong>Total Room Revenue</strong> by 10 for <strong>Maximum Dallas TPID Incentive</strong>
+                </li>
+            </ul>
+        </div>
 
-	<!-- Math section to calculate total eligible DTPID Amount-->
+        <!-- Math section to calculate total eligible DTPID Amount-->
 
-	<div class="form-group form-inline">
-		<label>Dallas TPID Incentive Funds Requested: $</label>
-		<input id="00N0b00000BQW8Z" class="form-control" name="00N0b00000BQW8Z" size="20" type="text" placeholder="0" required/>
+        <div class="form-group form-inline">
+            <label>Dallas TPID Incentive Funds Requested: $</label>
+            <input id="00N0b00000BQW8Z" class="form-control" name="00N0b00000BQW8Z" size="20" type="text"
+                   placeholder="0" required/>
 
-		<p>This cannot be higher than the Maximum Dallas TPID Incentive ($<span id="finalDTPIDAmountDisplay2">0</span>)</p>
-	</div>
+            <p>This cannot be higher than the Maximum Dallas TPID Incentive ($<span
+                        id="finalDTPIDAmountDisplay2">0</span>)</p>
+        </div>
 
-	<div class="form-group">
-		<label>List Competing Cities and Give Brief Event Description: </label>
-		<textarea  id="00N0b0000082K90" class="form-control" name="00N0b0000082K90" rows="5" type="text" wrap="soft" required></textarea><br>
+        <div class="form-group">
+            <label>List Competing Cities and Give Brief Event Description: </label>
+            <textarea id="00N0b0000082K90" class="form-control" name="00N0b0000082K90" rows="5" type="text" wrap="soft"
+                      required></textarea><br>
 
-		<label>Brief Description of DTPID Funding:</label>
-		<textarea  id="00N0b000009fiCp" class="form-control" name="00N0b000009fiCp" rows="5" type="text" wrap="soft" required></textarea><br>
+            <label>Brief Description of DTPID Funding:</label>
+            <textarea id="00N0b000009fiCp" class="form-control" name="00N0b000009fiCp" rows="5" type="text" wrap="soft"
+                      required></textarea><br>
 
-	</div>
+        </div>
 
-	<p>When submitting this Individual Hotel Incentive Application, signatories acknowledge the information contained herein as accurate and agree to review of all related event materials and final support documentation prior to DTPID payment.</p>
-<p>*Events consumed before January 1, 2022 require minimum ten (10) rooms on peak.  
-			Events consuming on or after January 1, 2022, must be greater than or equal to 10% of Total Property Sleeping Rooms.</p>
-	<p class="disclaimer"><strong>If you have any questions, please contact Sheryl Budelier at (214) 571-1337 or <a href="mailto:Sheryl@dallastpid.com">Sheryl@dallastpid.com</a></strong></p>
+        <p>When submitting this Individual Hotel Incentive Application, signatories acknowledge the information
+            contained herein as accurate and agree to review of all related event materials and final support
+            documentation prior to DTPID payment.</p>
+        <p>*Events consumed before January 1, 2022 require minimum ten (10) rooms on peak.
+            Events consuming on or after January 1, 2022, must be greater than or equal to 10% of Total Property
+            Sleeping Rooms.</p>
+        <p class="disclaimer"><strong>If you have any questions, please contact Sheryl Budelier at (214) 571-1337 or <a
+                        href="mailto:Sheryl@dallastpid.com">Sheryl@dallastpid.com</a></strong></p>
 
-	<p class="disclaimer"><strong>Print this screen for your records before submitting. (Control+P or Command+P)</strong></p>
+        <p class="disclaimer"><strong>Print this screen for your records before submitting. (Control+P or
+                Command+P)</strong></p>
 
-	<p class="text-center btn-submit">
-		<input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">
-	</p>
-</div>
+        <p class="text-center btn-submit">
+            <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit">
+        </p>
+    </div>
 </form>
 
 <script type="text/javascript" src="assets/js/preHotelFormFinal.js"></script>
